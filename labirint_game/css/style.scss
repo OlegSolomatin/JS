@@ -49,13 +49,15 @@ body {
 }
 
 .labirint {
-  width: min-content;
-  height: auto;
+  width: 1200px;
+  height: 900px;
   display: grid;
   grid-template-columns: repeat(3, min-content);
   grid-template-rows: min-content;
   background-color: transparent;
-  position: absolute;
+  position: relative;
+  border: 10px solid white;
+  border-radius: 15px;
 
   .row {
     width: 70px;
@@ -81,16 +83,16 @@ body {
     left: 98%;
   }
   .left-wall, .right-wall {
-    display: grid;
+    display: none;
     grid-template-rows: repeat(12,min-content);
     grid-template-columns: repeat(1,min-content);
   }
   .middle-wall {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     .top-wall, .bottom-wall {
-      display: grid;
+      display: none;
       grid-template-columns: repeat(12, min-content);
       grid-template-rows: repeat(1, min-content);
     }
@@ -98,7 +100,8 @@ body {
   .width-wall{
     width: 120px;
     height: 10px;
-    background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: ghostwhite;
+    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s cubic-bezier(0.2,-0.01, 0.75, 1) infinite;
 
@@ -112,12 +115,13 @@ body {
       100% {
         background-position: 0% 50%;
       }
-    }
+    }*/
   }
   .height-wall {
     width: 10px;
     height: 120px;
-    background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: ghostwhite;
+    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 
@@ -131,6 +135,6 @@ body {
       100% {
         background-position: 0% 50%;
       }
-    }
+    }*/
   }
 }
