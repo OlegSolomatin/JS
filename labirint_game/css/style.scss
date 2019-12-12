@@ -5,6 +5,13 @@ body {
   filter: drop-shadow(0 0 10px white);
 }
 
+@mixin flex-col-cen-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @function random_range($min, $max) {
   $rand: random();
   $random_range: $min + floor($rand * (($max - $min) + 1));
@@ -48,7 +55,43 @@ body {
   }
 }
 
-.labirint {
+.forma-registration {
+  width: 450px;
+  height: auto;
+  border: 2px solid red;
+  border-radius: 15px;
+  top: 25%;
+  left: calc(50% - 225px);
+  position: absolute;
+  padding: 15px;
+
+  .forma-reg-newuser {
+    @include flex-col-cen-cen;
+
+    .title-form {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 40px;
+      font-weight: 400;
+      color: darkgreen;
+    }
+
+    .forma-reg-input-cont {
+      @include flex-col-cen-cen;
+      width: 350px;
+
+      input {
+        width: 350px;
+        height: 50px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid grey;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+/*.labirint {
   width: min-content;
   height: auto;
   display: grid;
@@ -68,11 +111,11 @@ body {
     left: calc(50% - 40px);
     /*left: calc(50% - 100px);
     right: calc(50% - 100px);*/
-    border: 5px solid black;
+    /*border: 5px solid black;
     border-radius: 50%;
-  }
+  }*/
 
-  .finish {
+  /*.finish {
     width: 10px;
     height: 10px;
     background: greenyellow;
@@ -98,7 +141,8 @@ body {
   .width-wall{
     width: 120px;
     height: 10px;
-    background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: white;
+    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s cubic-bezier(0.2,-0.01, 0.75, 1) infinite;
 
@@ -112,12 +156,13 @@ body {
       100% {
         background-position: 0% 50%;
       }
-    }
-  }
+    }*/
+  /*}
   .height-wall {
     width: 10px;
     height: 120px;
-    background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: white;
+    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 
@@ -131,6 +176,6 @@ body {
       100% {
         background-position: 0% 50%;
       }
-    }
-  }
-}
+    }*/
+  /*}
+}*/
