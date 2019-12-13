@@ -2,7 +2,14 @@ body {
   height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-  filter: drop-shadow(0 0 10px white);
+  /*filter: drop-shadow(0 0 10px white);*/
+}
+
+@mixin flex-col-cen-cen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @function random_range($min, $max) {
@@ -18,6 +25,7 @@ body {
   height: 10px;
   background: white;
   border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
@@ -48,93 +56,60 @@ body {
   }
 }
 
-.labirint {
-  width: 1200px;
-  height: 900px;
-  display: grid;
-  grid-template-columns: repeat(3, min-content);
-  grid-template-rows: min-content;
-  background-color: transparent;
-  position: relative;
-  border: 10px solid white;
+.forma-registration {
+  width: 450px;
+  height: auto;
+  border: 2px solid red;
   border-radius: 15px;
+  top: 25%;
+  left: calc(50% - 225px);
+  position: absolute;
+  padding: 15px;
 
-  .row {
-    width: 70px;
-    height: 70px;
-    background-color: mintcream;
-    display: flex;
-    justify-content: center;align-items: center;
-    position: absolute;
-    top: calc(50% - 40px);
-    left: calc(50% - 40px);
-    /*left: calc(50% - 100px);
-    right: calc(50% - 100px);*/
-    border: 5px solid black;
-    border-radius: 50%;
-  }
+  .forma-reg-newuser {
+    @include flex-col-cen-cen;
 
-  .finish {
-    width: 10px;
-    height: 10px;
-    background: greenyellow;
-    position: absolute;
-    top: 45%;
-    left: 98%;
-  }
-  .left-wall, .right-wall {
-    display: none;
-    grid-template-rows: repeat(12,min-content);
-    grid-template-columns: repeat(1,min-content);
-  }
-  .middle-wall {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    .top-wall, .bottom-wall {
-      display: none;
-      grid-template-columns: repeat(12, min-content);
-      grid-template-rows: repeat(1, min-content);
+    .title-form {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 40px;
+      font-weight: 600;
+      color: darkgreen;
+      filter: none;
     }
-  }
-  .width-wall{
-    width: 120px;
-    height: 10px;
-    background: ghostwhite;
-    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s cubic-bezier(0.2,-0.01, 0.75, 1) infinite;
 
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }*/
-  }
-  .height-wall {
-    width: 10px;
-    height: 120px;
-    background: ghostwhite;
-    /*background: linear-gradient(-90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    .forma-reg-input-cont {
+      @include flex-col-cen-cen;
+      width: 350px;
 
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
+      .input-field {
+        width: 350px;
+        height: 50px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid grey;
+        margin: 5px;
+        padding: 0 0 0 15px;
       }
-      50% {
-        background-position: 100% 50%;
+      .custom-redemption-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+        .checkbox {
+          width: 25px;
+          height: auto;
+          margin: 10px;
+          border: none;
+          outline: none;
+        }
+
+        .custom-redemption {
+          color: whitesmoke;
+          font-size: 18px;
+        }
       }
-      100% {
-        background-position: 0% 50%;
-      }
-    }*/
+    }
   }
 }
