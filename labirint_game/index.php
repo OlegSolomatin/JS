@@ -1,5 +1,18 @@
 <?php
-    require_once("form-registr.php");
+    session_start();
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pfumiko</title>
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <?php
+        require_once("pages/auth.php");
     ?>
     <div class="snow"></div>
     <div class="snow"></div>
@@ -200,7 +213,11 @@
     <div class="snow"></div>
     <div class="snow"></div>
     <div class="snow"></div>
-    <!--<div class="snow"></div>-->
-<!--<script rel="script" src="JS/row-infinite.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        $('#reg-but').click(function(){
+            $("#forma-registration").fadeToggle(100);
+        });
+    </script>
 </body>
 </html>

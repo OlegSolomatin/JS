@@ -82,41 +82,63 @@ body {
   border: 2px solid red;
   border-radius: 15px;
   left: calc(50% - 225px);
-  top: 17%;
-  @include flex-row-cen-cen;
+  top: 20%;
+  @include flex-col-cen-cen;
 
-  .reg-but {
-    width: 50%;
-    height: auto;
-    background: darkgreen;
-    color: white;
-    border-bottom-left-radius: 13px;
-    border-top-left-radius: 13px;
-    outline: none;
-    padding: 15px;
-    @include flex-cen-cen;
-    @include font-style;
-  }
+  .but-reg-or-auth {
+    @include flex-row-cen-cen;
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
 
-  .auth-but {
-    width: 50%;
-    height: auto;
-    color: white;
-    padding: 15px;
-    @include flex-cen-cen;
-    @include font-style;
+    .reg-but {
+      width: 50%;
+      height: auto;
+      color: white;
+      text-decoration: none;
+      outline: none;
+      padding: 15px;
+      @include flex-cen-cen;
+      @include font-style;
+    }
+
+    .auth-but {
+      width: 50%;
+      height: auto;
+      color: white;
+      text-decoration: none;
+      outline: none;
+      padding: 15px;
+      @include flex-cen-cen;
+      @include font-style;
+    }
   }
+}
+
+.reg-but:active {
+  background: #093e03;
+  border-top-left-radius: 13px;
+}
+
+.reg-but:hover {
+  background: darkgreen;
+  border-top-left-radius: 13px;
+}
+
+.auth-but:active {
+  background: #093e03;
+  border-top-right-radius: 13px;
+}
+
+.auth-but:hover {
+  background: darkgreen;
+  border-top-right-radius: 13px;
 }
 
 .forma-registration {
   width: 450px;
   height: auto;
-  border: 2px solid red;
-  border-radius: 15px;
-  top: 25%;
-  left: calc(50% - 225px);
-  position: absolute;
   padding: 15px;
+  display: none;
 
   .forma-reg-newuser {
     @include flex-col-cen-cen;
