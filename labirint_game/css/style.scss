@@ -5,9 +5,28 @@ body {
   /*filter: drop-shadow(0 0 10px white);*/
 }
 
+@mixin font-style {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Pacifico', cursive;
+}
+
 @mixin flex-col-cen-cen {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-cen-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-cen-cen {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -53,6 +72,39 @@ body {
         transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
       }
     }
+  }
+}
+
+.reg-or-auth {
+  width: 480px;
+  height: auto;
+  position: absolute;
+  border: 2px solid red;
+  border-radius: 15px;
+  left: calc(50% - 225px);
+  top: 17%;
+  @include flex-row-cen-cen;
+
+  .reg-but {
+    width: 50%;
+    height: auto;
+    background: darkgreen;
+    color: white;
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+    outline: none;
+    padding: 15px;
+    @include flex-cen-cen;
+    @include font-style;
+  }
+
+  .auth-but {
+    width: 50%;
+    height: auto;
+    color: white;
+    padding: 15px;
+    @include flex-cen-cen;
+    @include font-style;
   }
 }
 
