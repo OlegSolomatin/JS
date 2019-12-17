@@ -79,7 +79,7 @@ body {
   width: 480px;
   height: auto;
   position: absolute;
-  border: 2px solid red;
+  border: 3px solid #7b0103;
   border-radius: 15px;
   left: calc(50% - 225px);
   top: 20%;
@@ -88,7 +88,6 @@ body {
   .but-reg-or-auth {
     @include flex-row-cen-cen;
     width: 100%;
-    border-bottom: 2px solid whitesmoke;
 
     .reg-but {
       width: 50%;
@@ -122,6 +121,7 @@ body {
 .reg-but:hover {
   background: darkgreen;
   border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 .auth-but:active {
@@ -132,6 +132,7 @@ body {
 .auth-but:hover {
   background: darkgreen;
   border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
 
 .forma-registration {
@@ -139,6 +140,7 @@ body {
   height: auto;
   padding: 15px;
   display: none;
+  border-top: 2px solid white;
 
   .forma-reg-newuser {
     @include flex-col-cen-cen;
@@ -163,13 +165,22 @@ body {
         border-bottom: 2px solid grey;
         margin: 5px;
         padding: 0 0 0 15px;
+        outline: darkgreen;
+        color: white;
       }
+
+      .captcha-bloc {
+        @include flex-col-cen-cen;
+        margin: 15px 0;
+      }
+
       .custom-redemption-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 5px;
+        margin: 20px 0;
 
         .checkbox {
           width: 25px;
@@ -183,6 +194,43 @@ body {
           color: whitesmoke;
           font-size: 18px;
         }
+      }
+    }
+  }
+}
+
+.forma-auth {
+  width: 450px;
+  height: auto;
+  padding: 15px;
+  display: none;
+  border-top: 2px solid white;
+
+  .forma-auth-user {
+    @include flex-col-cen-cen;
+
+    .title-form {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 40px;
+      font-weight: 600;
+      color: darkgreen;
+      filter: none;
+    }
+
+    .forma-auth-input-cont {
+      @include flex-col-cen-cen;
+      width: 350px;
+
+      .input-field {
+        width: 350px;
+        height: 50px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid grey;
+        margin: 5px;
+        padding: 0 0 0 15px;
+        outline: darkgreen;
+        color: white;
       }
     }
   }
