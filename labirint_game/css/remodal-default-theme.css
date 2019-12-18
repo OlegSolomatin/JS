@@ -266,12 +266,14 @@
 }
 
 .mainButton{
-  padding: 7px 6px;
-  border-radius: 19px;
-  box-shadow: 0 0 5px darkgrey;
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 2px solid darkgrey;
   color: #fff;
   text-decoration: none;
-  font: bold 16px 'Roboto', sans-serif;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .success, .fail{

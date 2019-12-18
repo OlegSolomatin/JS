@@ -41,13 +41,13 @@ if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){?>
                 </label>
                 <label class="captcha-bloc">
                     <img src="../php/captcha.php" alt="Капча" />
-                    <input class="input-field" type="text" name="captcha" placeholder="Проверочный код" required="required">
+                    <input class="input-field" type="text" name="captcha" placeholder="Captcha code" required="required">
                 </label>
                 <label class="custom-redemption-container">
-                    <input class="checkbox" type="checkbox" required="required"><strong class="custom-redemption"><a class="mainButton" href="#modal">Пользовательское соглашение</a></strong>
+                    <input class="checkbox" type="checkbox" required="required"><strong class="custom-redemption"><a class="mainButton" href="#modal">Redemption user</a></strong>
                 </label>
                 <label>
-                    <input type="submit" name="btn_submit_register" value="Зарегистрироватся!">
+                    <input class="signin-btn" type="submit" name="btn_submit_register" value="Sign In">
                 </label>
             </div>
     </form>
