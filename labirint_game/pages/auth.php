@@ -1,9 +1,9 @@
 <div class="reg-or-auth">
     <div class="but-reg-or-auth">
-        <div class="reg-but" id="reg-but" onclick="checkblock(document.getElementById('forma-auth').style.display,document.getElementById('forma-registration').style.display)">
+        <div class="reg-but" id="reg-but" onclick="regbut(document.getElementById('forma-registration').style.display, document.getElementById('forma-auth').style.display)">
             Sign Up
         </div>
-        <div class="auth-but" id="auth-but" onclick="checkblock()">
+        <div class="auth-but" id="auth-but" onclick="regbut(document.getElementById('forma-registration').style.display, document.getElementById('forma-auth').style.display)">
             Log In
         </div>
     </div>

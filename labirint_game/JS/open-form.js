@@ -1,17 +1,15 @@
-function checkblock() {
-    if (document.getElementById('forma-registration').style.display === 'none') {
-
-        document.getElementById('reg-but').style.background = '#093b09';
-        document.getElementById('reg-but').style.borderBottomLeftRadius = '0px';
+function regbut(regform,authform) {
+    if (regform === 'none' && authform === 'block') {
+        document.getElementById('forma-registration').style.display = 'block';
         document.getElementById('forma-auth').style.display = 'none';
-    } else if (document.getElementById('forma-auth').style.display === 'block'){
-        document.getElementById('auth-but').style.background = '#093b09';
-        document.getElementById('auth-but').style.borderBottomRightRadius = '0px';
-        document.getElementById('forma-registration').style.display = 'none';
+        document.getElementById('reg-but').classList.add('reg-but-active');
+        document.getElementById('auth-but').classList.toggle('auth-but-active');
+    } else if ( regform === 'none' && authform === 'none'){
+      document.getElementById('auth.but').style.display = 'block';
     } else {
         document.getElementById('forma-registration').style.display = 'none';
-        document.getElementById('reg-but').style.background = 'transparent';
-        document.getElementById('forma-auth').style.display = 'none';
-        document.getElementById('auth-but').style.background = 'transparent';
+        document.getElementById('auth-but').classList.add('auth-but-active');
+        document.getElementById('reg-but').classList.toggle('reg-but-active');
+        document.getElementById('forma-auth').style.display = 'block';
     }
 }

@@ -29,11 +29,11 @@ if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){?>
                     <input class="input-field" name="login" type="text" placeholder="Login" required="required">
                 </label>
                 <label>
-                    <input class="input-field" name="pass" type="password" placeholder="Password" required="required">
+                    <input class="input-field" name="password" type="password" placeholder="Password" required="required">
                     <span id="valid_password_message" class="mesage_error"></span>
                 </label>
                 <label>
-                    <input class="input-field" name="last-pass" type="password" placeholder="Confirm Password" required="required">
+                    <input class="input-field" name="password" type="password" placeholder="Confirm Password" required="required">
                 </label>
                 <label>
                     <input class="input-field" name="email" type="email" placeholder="Your E'mail" required="required">
